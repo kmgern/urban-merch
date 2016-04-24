@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,300,700);
+
+/* Colors
+#B3D6D1 - light green
+#50B1A0 - medium green
+#2B1E17 - dark grey
+#6b2C03 - amber brown
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: Comfortaa, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  padding-top: 6.25rem;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+
+  height: 6.25rem;
+  width: 100%;
+
+  background: white;
+  color: #50B1A0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-right: 2.5rem;
+  box-shadow: 0px 2px 11px 4px rgba(20, 20, 20, 0.45);
+}
+
+nav .actions {
+  font-size: 2rem;
+}
+
+nav .icon {
+  color: #B3D6D1;
+}
+
+nav .menu {
+  margin-left: 1rem;
+}
+
+nav img {
+  height: calc(100% - 1rem);
+  margin-left: 1.5rem
+}
+
+html, body {
+  height: 100%;
+}
+
+main {
+  min-height: 100%;
+  display: flex;
+  color: white;
+}
+
+section {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+section:nth-of-type(1) {
+  background-color: #B3D6D1;
+}
+
+section:nth-of-type(2) {
+  background-color: #50B1A0;
+}
+
+section:nth-of-type(3) {
+  background-color: #6b2C03;
+}
+
+section:nth-of-type(4) {
+  background-color: #2B1E17;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+section header {
+  display: flex;
+  flex-direction: column;
+}
+
+section img {
+  width: 100%;
+  display: block;
+  margin-top: 1.5rem
+}
+
+section p {
+  height: 4.5rem;
+}
+
+@media only screen and (max-width: 840px) {
+  html {
+    font-size: 14px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  section {
+    flex-direction: row;
+  }
+
+  section img {
+    width: 200px;
+    height: 200px;
+    margin-top: 0;
+    margin-left: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  html {
+    font-size: 12px;
+  }
+
+  section header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header h1 {
+    margin-right: 2rem;
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  header p {
+    flex: 2;
+    height: auto;
+  }
+
+  /* select every image inside of a section except the first one */
+  section img:not(:first-of-type) {
+    display: none; /* hide the image */
+  }
+
+  section img {
+    width: 125px;
+    height: 125px;
+  }
+}
