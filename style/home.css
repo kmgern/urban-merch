@@ -1,0 +1,93 @@
+
+
+#home .section { /*applies to all my sections*/
+  flex: 1;
+  color: inherit;
+  text-decoration: inherit;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/*selecting sections*/
+#home .section:nth-of-type(1) { /*first section*/
+  background-color: #B3D6D1;
+}
+
+#home .section:nth-of-type(2) { /*second section*/
+  background-color: #50B1A0;
+}
+
+#home .section:nth-of-type(3) { /*third section*/
+  background-color: #6b2C03;
+}
+
+#home .section:nth-of-type(4) { /*forth section*/
+  background-color: #2B1E17;
+}
+
+#home .section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+#home .section header {
+  display: flex;
+  flex-direction: column;
+}
+
+#home .section img {
+  width: 100%;
+  display: block;
+  margin-top: 1.5rem  /*this allows my image to fill the space always maintaining this margin*/
+}
+
+#home .section p {
+  height: 4.5rem;
+}
+
+@media only screen and (max-width: 840px) {  /*tablet-size response rules*/
+  main#home {
+    flex-direction: column;
+  }
+
+  #home .section {
+    flex-direction: row;
+  }
+
+  #home .section img {
+    width: 200px;
+    height: 200px;
+    margin-top: 0;
+    margin-left: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 620px) { /*phone-size response rules*/
+  #home .section header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #home header h1 {
+    margin-right: 2rem;
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  #home header p {
+    flex: 2;
+    height: auto;
+  }
+
+  /* select every image inside of a section except the first one */
+  #home .section img:not(:first-of-type) {
+    display: none; /* hide the image */
+  }
+
+  #home .section img {
+    width: 125px;
+    height: 125px;
+  }
+}

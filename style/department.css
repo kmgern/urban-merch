@@ -1,0 +1,104 @@
+main#department {
+  flex-wrap: wrap;
+}
+
+#department .showcase {
+  flex: 1;
+  flex-basis: 33.33333%;
+  position: relative;
+  margin-top: -3px; /* revisit if there's time */
+}
+
+#department .two {
+  display: none;
+}
+
+/*
+Neat padding-top trick. Uses the fact that padding is always relative to
+the width of the containing element. This means if I want to have width 33%
+and height 33% I can set the padding top to 33%.
+http://stackoverflow.com/questions/21537806/css-height-same-as-width
+*/
+#department .showcase.block {
+  padding-top: 33.33333%;
+  height: 100%;
+}
+
+#department .block.walls {
+  background-color: #B3D6D1;
+}
+
+/*#department .block.walls:before {
+  content: 'walls';
+}*/
+
+#department .showcase img {
+  width: 100%;
+}
+
+#department .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity .25s ease-in-out; /* http://bavotasan.com/2011/a-simple-fade-with-css3/ */
+  background: rgba(0, 0, 0, .3);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;;
+  flex-direction: row;
+}
+
+#department .overlay:hover {
+  opacity: 1;
+}
+
+#department .overlay span {
+  font-size: 1.5rem;
+  font-weight: lighter;
+
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+#department .overlay .action {
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+/*two across*/
+@media only screen and (max-width: 840px) {  /*tablet-size response rules*/
+  #department .showcase {
+    flex-basis: 50%;
+  }
+
+  #department .showcase.block {
+    padding-top: 50%;
+  }
+
+  #department .two {
+    display: inherit;;
+  }
+
+  #department .three {
+    display: none;
+  }
+}
+
+/*one across*/
+@media only screen and (max-width: 620px) { /*phone-size response rules*/
+  #department .showcase {
+    flex-basis: 100%;
+  }
+
+  #department .showcase.walls {
+    display: none;
+  }
+}

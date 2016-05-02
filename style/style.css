@@ -8,11 +8,11 @@
 */
 
 html {
-  box-sizing: border-box;
+  box-sizing: border-box; /*applies to everything*/
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+*, *:before, *:after { /*trick to match all elements on page*/
+  box-sizing: inherit; /*everything gets the sizing from their parent*/
 }
 
 html {
@@ -24,25 +24,37 @@ body {
   padding-top: 6.25rem;
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 nav {
   position: fixed;
   top: 0;
+  z-index: 3;
 
-  height: 6.25rem;
+  height: 6.25rem; /*calculated from 16px standard font*/
   width: 100%;
 
   background: white;
   color: #50B1A0;
 
+/*using flex layout*/
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /*centers things vertically*/
+  justify-content: space-between; /*spreads things out horizontally*/
 
   padding-right: 2.5rem;
   box-shadow: 0px 2px 11px 4px rgba(20, 20, 20, 0.45);
 }
 
-nav .actions {
+nav .actions { /*cart and menu will be actions*/
   font-size: 2rem;
 }
 
@@ -54,9 +66,13 @@ nav .menu {
   margin-left: 1rem;
 }
 
-nav img {
-  height: calc(100% - 1rem);
+nav .logo {
+  height: calc(100% - 1rem); /*img takes up 100% of height minus 16px, top and bottom*/
   margin-left: 1.5rem
+}
+
+nav img {
+  height: 100%;
 }
 
 html, body {
@@ -69,99 +85,14 @@ main {
   color: white;
 }
 
-section {
-  flex: 1;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-section:nth-of-type(1) {
-  background-color: #B3D6D1;
-}
-
-section:nth-of-type(2) {
-  background-color: #50B1A0;
-}
-
-section:nth-of-type(3) {
-  background-color: #6b2C03;
-}
-
-section:nth-of-type(4) {
-  background-color: #2B1E17;
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
-section header {
-  display: flex;
-  flex-direction: column;
-}
-
-section img {
-  width: 100%;
-  display: block;
-  margin-top: 1.5rem
-}
-
-section p {
-  height: 4.5rem;
-}
-
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 840px) {  /*tablet-size response rules*/
   html {
     font-size: 14px;
   }
-
-  main {
-    flex-direction: column;
-  }
-
-  section {
-    flex-direction: row;
-  }
-
-  section img {
-    width: 200px;
-    height: 200px;
-    margin-top: 0;
-    margin-left: 1.5rem;
-  }
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 620px) { /*phone-size response rules*/
   html {
     font-size: 12px;
-  }
-
-  section header {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  header h1 {
-    margin-right: 2rem;
-    margin-bottom: 0;
-    flex: 1;
-  }
-
-  header p {
-    flex: 2;
-    height: auto;
-  }
-
-  /* select every image inside of a section except the first one */
-  section img:not(:first-of-type) {
-    display: none; /* hide the image */
-  }
-
-  section img {
-    width: 125px;
-    height: 125px;
   }
 }
