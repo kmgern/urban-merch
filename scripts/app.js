@@ -1,18 +1,17 @@
-$('document').ready(function () {
+$(document).ready(function () {
   $('[data-cart-add]').click(function () {
     var cart = $('[data-cart-count]');
+    var currentCount = Number(cart.text());
 
-    cart.html(Number(cart.text())+ 1);
+    cart.html(currentCount + 1);
   });
-});
 
-$('document').ready(function () {
   $('[data-cart-remove]').click(function () {
     var cart = $('[data-cart-count]');
-    var cartCount = Number(cart.text());
+    var currentCount = Number(cart.text());
 
-    if (cartCount > 0) {
-      cart.html(cartCount - 1);
+    if (currentCount > 0) {
+      cart.html(currentCount - 1);
     }
   });
 });

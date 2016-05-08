@@ -9,10 +9,6 @@ main#department {
   margin-top: -3px; /* revisit if there's time */
 }
 
-#department .two {
-  display: none;
-}
-
 /*
 Neat padding-top trick. Uses the fact that padding is always relative to
 the width of the containing element. This means if I want to have width 33%
@@ -22,18 +18,56 @@ http://stackoverflow.com/questions/21537806/css-height-same-as-width
 #department .showcase.block {
   padding-top: 33.33333%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #department .block.walls {
   background-color: #B3D6D1;
 }
 
-/*#department .block.walls:before {
+#department .block.shelves {
+  background-color: #50B1A0;
+}
+
+#department .block:before {
+  content: 'home allure';
+  margin-top: -100%;
+  font-size: 1.25rem;
+  font-weight: lighter;
+  border-bottom: 2px solid white;
+  padding-bottom: .5rem;
+  margin-bottom: .4rem;
+  padding-left: .6rem; /*these line and next make the line/border bottom longer*/
+  padding-right: .6rem;
+}
+
+#department .block:after {
+  font-size: 2rem;
+
+}
+
+#department .block.walls:after {
   content: 'walls';
-}*/
+}
+
+#department .block.shelves:after {
+  content: 'shelves';
+}
 
 #department .showcase img {
   width: 100%;
+}
+
+#department .showcase h2 {
+  font-size: 2.5rem;
+}
+
+#department .showcase h2 a {
+  color: white;
+  text-decoration: none;
 }
 
 #department .overlay {
@@ -73,7 +107,11 @@ http://stackoverflow.com/questions/21537806/css-height-same-as-width
   font-size: 2.5rem;
 }
 
-/*two across*/
+#department .showcase.two {
+  display: none;
+}
+
+/*two across on tablets*/
 @media only screen and (max-width: 840px) {  /*tablet-size response rules*/
   #department .showcase {
     flex-basis: 50%;
@@ -83,22 +121,26 @@ http://stackoverflow.com/questions/21537806/css-height-same-as-width
     padding-top: 50%;
   }
 
-  #department .two {
-    display: inherit;;
+  #department .showcase.two {
+    display: inherit;
   }
 
-  #department .three {
+  #department .showcase.three {
     display: none;
+  }
+
+  #department .overlay {
+    opacity: 1;
   }
 }
 
-/*one across*/
+/*one across on phones*/
 @media only screen and (max-width: 620px) { /*phone-size response rules*/
   #department .showcase {
     flex-basis: 100%;
   }
 
-  #department .showcase.walls {
+  #department .showcase.block {
     display: none;
   }
 }
