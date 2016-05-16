@@ -32,6 +32,14 @@ http://stackoverflow.com/questions/21537806/css-height-same-as-width
   background-color: #50B1A0;
 }
 
+#department .block.closets {
+  background-color: #6b2C03 ;
+}
+
+#department .block.floors {
+  background-color: #2B1E17;
+}
+
 #department .block:before {
   content: 'home allure';
   margin-top: -100%;
@@ -56,6 +64,14 @@ http://stackoverflow.com/questions/21537806/css-height-same-as-width
 #department .block.shelves:after {
   content: 'shelves';
 }
+
+#department .block.closets:after {
+  content: 'closets';
+}
+#department .block.floors:after {
+  content: 'floors';
+}
+
 
 #department .showcase img {
   width: 100%;
@@ -109,6 +125,11 @@ http://stackoverflow.com/questions/21537806/css-height-same-as-width
 
 #department .showcase.two {
   display: none;
+}
+
+main #department .footer.join:hover{
+  display: content inline-flex;
+
 }
 
 /*two across on tablets*/

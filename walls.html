@@ -12,6 +12,7 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
 
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/department.css">
@@ -26,8 +27,7 @@
 
 	<div class="actions">
 		<i class="fa fa-shopping-cart icon" aria-hidden="true"></i>
-		<span class="count" data-cart-count>0</span>
-		<i class="fa fa-bars menu" aria-hidden="true"></i>
+		<div class="count" data-cart-count>0</div>
 	</div>
 </nav>
 
@@ -36,11 +36,11 @@
 		<img src="images/walls-landscapePainting.jpg" alt="image of landscape painting" />
 		<div class="overlay">
 			<span>€200</span>
-			<i class="fa fa-minus action" aria-hidden="true" data-cart-remove></i>
+			<i class="fa fa-minus action" data-cart-remove></i> <!-- remove attribute -->
 			<h2>
 				<a href="images/walls-landscapePainting.jpg" data-lightbox="walls-landscapePainting" data-title="Fill me in later.">landscape</a>
 			</h2>
-			<i class="fa fa-plus action" aria-hidden="true" data-cart-add></i>
+			<i class="fa fa-plus action" data-cart-add></i>
 		</div>
 	</div>
 
@@ -54,11 +54,11 @@
 		<img src="images/walls-clock.jpg" alt="image of wall clock" />
 		<div class="overlay">
 			<span>€150</span>
-			<i class="fa fa-minus action" aria-hidden="true" data-cart-remove></i>
+			<i class="fa fa-minus action" data-cart-remove></i>
 			<h2>
 				<a href="images/walls-clock.jpg" data-lightbox="walls-clock" data-title="Fill me in later.">clock</a>
 			</h2>
-			<i class="fa fa-plus action" aria-hidden="true" data-cart-add></i>
+			<i class="fa fa-plus action" data-cart-add></i>
 		</div>
 	</div>
 
@@ -69,11 +69,11 @@
 		<img src="images/walls-paintingTrio.jpg" alt="image of three paintings on wall" />
 		<div class="overlay">
 			<span>€125</span>
-			<i class="fa fa-minus action" aria-hidden="true" data-cart-remove></i>
+			<i class="fa fa-minus action" data-cart-remove></i>
 			<h2>
 				<a href="images/walls-paintingTrio.jpg" data-lightbox="walls-paintingTrio" data-title="Fill me in later.">trio</a>
 			</h2>
-			<i class="fa fa-plus action" aria-hidden="true" data-cart-add></i>
+			<i class="fa fa-plus action" data-cart-add></i>
 		</div>
 	</div>
 
@@ -86,11 +86,11 @@
 		<img src="images/walls-mirror.jpg" alt="image of mirror on wall" />
 		<div class="overlay">
 			<span>€100</span>
-			<i class="fa fa-minus action" aria-hidden="true" data-cart-remove></i>
+			<i class="fa fa-minus action" data-cart-remove></i>
 			<h2>
 				<a href="images/walls-mirror.jpg" data-lightbox="walls-mirror" data-title="Fill me in later.">mirror</a>
 			</h2>
-			<i class="fa fa-plus action" aria-hidden="true" data-cart-add></i>
+			<i class="fa fa-plus action" data-cart-add></i>
 		</div>
 	</div>
 
@@ -101,11 +101,11 @@
 		<img src="images/walls-blackPainting.jpg" alt="image of black painting on wall" />
 		<div class="overlay">
 			<span>€100</span>
-			<i class="fa fa-minus action" aria-hidden="true" data-cart-remove></i>
+			<i class="fa fa-minus action" data-cart-remove></i>
 			<h2>
 				<a href="images/walls-blackPainting.jpg" data-lightbox="walls-blackPainting" data-title="Fill me in later.">painting</a>
 			</h2>
-			<i class="fa fa-plus action" aria-hidden="true" data-cart-add></i>
+			<i class="fa fa-plus action" data-cart-add></i>
 		</div>
 	</div>
 
@@ -114,27 +114,38 @@
 </main>
 
 <footer>
-	<a class="social" href="http://twitter.com/urbanMerch" target="_blank">
-		<i class="fa fa-twitter" aria-hidden="true"></i>
-	</a>
-	<a class="social" href="http://pinterest.com/urbanMerch" target="_blank">
-		<i class="fa fa-pinterest-square" aria-hidden="true"></i>
-	</a>
-	<a class="social" href="http://facebook.com/urbanMerch" target="_blank">
-		<i class="fa fa-facebook-official" aria-hidden="true"></i>
-	</a>
-	<a class="social" href="http://instagram.com/urbanMerch" target="_blank">
-		<i class="fa fa-instagram" aria-hidden="true"></i>
-	</a>
-	<a class="social" href="mailto:info@urbanmerch.com" target="_blank">
-		<i class="fa fa-envelope" aria-hidden="true"></i>
-	</a>
-	<a class="social" href="https://www.google.ie/maps/place/53%C2%B020'41.3%22N+6%C2%B015'48.8%22W/@53.3448097,-6.2657524,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d53.3448097!4d-6.2635637?hl=en" target="_blank">
-		<i class="fa fa-map-marker" aria-hidden="true"></i>
-	</a>
+	<div data-social>
+		<a class="social" href="http://twitter.com/urbanMerch" target="_blank">
+			<i class="fa fa-twitter" aria-hidden="true"></i>
+		</a>
+		<a class="social" href="http://pinterest.com/urbanMerch" target="_blank">
+			<i class="fa fa-pinterest-square" aria-hidden="true"></i>
+		</a>
+		<a class="social" href="http://facebook.com/urbanMerch" target="_blank">
+			<i class="fa fa-facebook-official" aria-hidden="true"></i>
+		</a>
+		<a class="social" href="http://instagram.com/urbanMerch" target="_blank">
+			<i class="fa fa-instagram" aria-hidden="true"></i>
+		</a>
+		<a class="social" href="mailto:info@urbanmerch.com" target="_blank">
+			<i class="fa fa-envelope" aria-hidden="true"></i>
+		</a>
+		<a class="social" href="https://www.google.ie/maps/place/53%C2%B020'41.3%22N+6%C2%B015'48.8%22W/@53.3448097,-6.2657524,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d53.3448097!4d-6.2635637?hl=en" target="_blank">
+			<i class="fa fa-map-marker" aria-hidden="true"></i>
+		</a>
+	</div>
+
+	<form data-email-me>
+		<input type="email" name="email" placeholder="Keep me in the loop" spellcheck="false" autocomplete="off">
+	</form>
+
+	<div class="join">
+		<i class= "fa fa-users" aria-hidden="true" data-join-icon></i>
+	</div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 <script src="scripts/app.js"></script>
 </body>

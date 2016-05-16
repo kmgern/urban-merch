@@ -4,11 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	<title>Urban Merch | In Store or Online Shop | Home Allure | Walls, Shelves, Presses, Floors | Home Fashion | Nest | Homewares | Anthology </title>
+	<title>Urban Merch | In Store or Online Shop | Home Allure | Walls, Shelves, Closets, Floors | Home Fashion | Your Trendy Nest | Homewares </title>
 
 	<link rel="stylesheet" type="text/css" href="style/reset.css">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
 
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/home.css">
@@ -23,8 +24,7 @@
 
 	<div class="actions">
 		<i class="fa fa-shopping-cart icon" aria-hidden="true"></i>
-		<span class="count">3</span>
-		<i class="fa fa-bars menu" aria-hidden="true"></i>
+		<div class="count">0</div>
 	</div>
 </nav>
 
@@ -47,13 +47,13 @@
 		<img src="images/shelves-sailboat.jpg" alt="image of sailboat sculpture on shelf" />
 	</a>
 
-	<a class="section" href="presses.html">
+	<a class="section" href="closets.html">
 		<header>
-			<h1>presses</h1>
+			<h1>closets</h1>
 			<p>Keep organized in style behind closed doors.</p>
 		</header>
-		<img src="images/presses-hangers.jpg" alt="image of press hanger" />
-		<img src="images/presses-bottleStorage.jpg" alt="image of wooden press shelving" />
+		<img src="images/closets-hangers.jpg" alt="image of closet hanger" />
+		<img src="images/closets-bottleStorage.jpg" alt="image of wooden closet shelving" />
 	</a>
 
 	<a class="section" href="floors.html">
@@ -68,27 +68,39 @@
 </main>
 
 <footer>
-	<a class="social" href="http://twitter.com/urbanMerch" target="_blank">
-		<i class="fa fa-twitter" aria-hidden="true"></i>
-	</a>
-	<a class="social" href="http://pinterest.com/urbanMerch" target="_blank">
-		<i class="fa fa-pinterest-square" aria-hidden="true"></i>
-	</a>
-	<a class="social" href="http://facebook.com/urbanMerch" target="_blank">
-		<i class="fa fa-facebook-official" aria-hidden="true"></i>
-	</a>
-	<a class="social" href="http://instagram.com/urbanMerch" target="_blank">
-		<i class="fa fa-instagram" aria-hidden="true"></i>
-	</a>
-	<a class="social" href="mailto:info@urbanmerch.com" target="_blank">
-		<i class="fa fa-envelope" aria-hidden="true"></i>
-	</a>
-	<a class="social" href="https://www.google.ie/maps/place/53%C2%B020'41.3%22N+6%C2%B015'48.8%22W/@53.3448097,-6.2657524,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d53.3448097!4d-6.2635637?hl=en" target="_blank">
-		<i class="fa fa-map-marker" aria-hidden="true"></i>
-	</a>
+	<div data-social>
+		<a class="social" href="http://twitter.com/urbanMerch" target="_blank">
+			<i class="fa fa-twitter" aria-hidden="true"></i>
+		</a>
+		<a class="social" href="http://pinterest.com/urbanMerch" target="_blank">
+			<i class="fa fa-pinterest-square" aria-hidden="true"></i>
+		</a>
+		<a class="social" href="http://facebook.com/urbanMerch" target="_blank">
+			<i class="fa fa-facebook-official" aria-hidden="true"></i>
+		</a>
+		<a class="social" href="http://instagram.com/urbanMerch" target="_blank">
+			<i class="fa fa-instagram" aria-hidden="true"></i>
+		</a>
+		<a class="social" href="mailto:info@urbanmerch.com" target="_blank">
+			<i class="fa fa-envelope" aria-hidden="true"></i>
+		</a>
+		<a class="social" href="https://www.google.ie/maps/place/53%C2%B020'41.3%22N+6%C2%B015'48.8%22W/@53.3448097,-6.2657524,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d53.3448097!4d-6.2635637?hl=en" target="_blank">
+			<i class="fa fa-map-marker" aria-hidden="true"></i>
+		</a>
+	</div>
+
+	<form data-email-me>
+		<input type="email" name="email" placeholder="Keep me in the loop" spellcheck="false" autocomplete="off">
+	</form>
+
+	<div class="join">
+		<i class= "fa fa-users" aria-hidden="true" data-join-icon></i>
+	</div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
 <script src="scripts/app.js"></script>
 
 </body>

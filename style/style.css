@@ -3,8 +3,8 @@
 /* Colors
 #B3D6D1 - light green
 #50B1A0 - medium green
-#2B1E17 - dark grey
 #6b2C03 - amber brown
+#2B1E17 - dark brown
 */
 
 html {
@@ -56,14 +56,16 @@ nav {
 
 nav .actions { /*cart and menu will be actions*/
   font-size: 2rem;
+  display: flex;
 }
 
 nav .icon {
   color: #B3D6D1;
 }
 
-nav .menu {
+nav .count {
   margin-left: 1rem;
+  width: 2rem;
 }
 
 nav .logo {
@@ -99,8 +101,43 @@ footer .social {
   text-decoration: none;
 }
 
-footer .social:not(:last-of-type) {
+footer .social:not(:last-of-type) { /*in order to center it, giving it more right margin to do so*/
   margin-right: 2rem;
+}
+
+
+/*hide the "emailMe" field. When hovered, text to read*/
+footer .join {
+  color: #50B1A0;
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+  height: 3rem;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+footer form {
+  width: 40%;
+  display: none;
+}
+
+footer input {
+  width: 100%;
+
+  border: 2px solid #50B1A0;
+  border-radius: 4px;
+  padding: .3rem .5rem;
+
+  font-size: 1.1rem;
+  font-family: Comfortaa, sans-serif
+}
+
+footer input:focus {
+  outline: none;
+  border-color: #6b2C03;
 }
 
 @media only screen and (max-width: 840px) {  /*tablet-size response rules*/
